@@ -111,6 +111,10 @@
               <a href="#about">About</a>
             </li>
             <li>
+              <i class="fa-solid fa-graduation-cap"></i>
+              <a href="#education">Education</a>
+            </li>
+            <li>
               <i class="fa-solid fa-briefcase"></i>
               <a href="#experience">Experience</a>
             </li>
@@ -264,9 +268,64 @@
           </div>
         </div>
       </section>
+      <section class="education reveal" id="education">
+        <p>EDUCATION</p>
+        <h1>Academic Journey</h1>
+        <hr />
+        <div class="education-intro">
+          <p>
+            My academic path has been closely tied to practical project work,
+            with each degree pushing me toward stronger software engineering and
+            product-building skills.
+          </p>
+        </div>
+        <div class="education-grid">
+          <article class="education-card">
+            <div class="education-meta">
+              <span class="education-badge">Current Degree</span>
+              <span class="education-campus">PES College, Bangalore</span>
+            </div>
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p>
+              Focused on advanced application development, problem solving, and
+              building stronger foundations across AI/ML and full-stack
+              engineering.
+            </p>
+            <div class="education-projects">
+              <h4>Projects Completed During MCA</h4>
+              <div class="education-project-tags">
+                <span>CricketVerse</span>
+                <span>Snake Game</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="education-card">
+            <div class="education-meta">
+              <span class="education-badge">Completed Degree</span>
+              <span class="education-campus"
+                >Dayananda Sagar College, Bangalore</span
+              >
+            </div>
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p>
+              Built my base in programming, databases, and web application
+              development while turning classroom concepts into practical
+              projects.
+            </p>
+            <div class="education-projects">
+              <h4>Projects Completed During BCA</h4>
+              <div class="education-project-tags">
+                <span>Fashion-Hut</span>
+                <span>Success The Ultimate Destination</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
       <section class="experience reveal" id="experience">
         <p>EXPERIENCE</p>
-        <h1>Internship & Freelance Work</h1>
+        <h1>Internships & Freelance Work</h1>
         <hr />
         <div class="experience-intro">
           <p>
@@ -287,8 +346,8 @@
             <h3>AI/ML Intern</h3>
             <p>
               Hands-on experience across Django workflows, model retraining, and
-              computer vision validation pipelines for production-minded AI
-              systems.
+              computer vision validation pipelines, including internship work on
+              a rent prediction project for practical ML application.
             </p>
             <ul class="experience-points">
               <li>
@@ -303,12 +362,57 @@
                 Contributed to ROI and annotation-based computer vision checks
                 to improve image accuracy and validation quality.
               </li>
+              <li>
+                Worked on a rent prediction project as part of internship
+                problem solving and applied machine learning practice.
+              </li>
             </ul>
             <div class="experience-tags">
               <span>Django</span>
               <span>Machine Learning</span>
+              <span>Rent Prediction</span>
               <span>Docker</span>
               <span>Computer Vision</span>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-meta">
+              <span class="experience-badge">Internship</span>
+              <span class="experience-company"
+                >Automation and Robotics Centre (ARC) | Mar 2025 - Jun
+                2025</span
+              >
+            </div>
+            <h3>Robotics Trainee</h3>
+            <p>
+              Completed hands-on industrial robotics training in Bangalore with
+              strong exposure to robot programming, simulation, safety, and
+              automation workflows.
+            </p>
+            <ul class="experience-points">
+              <li>
+                Trained on KUKA robot kinematics, KRL programming, ROS, PLC
+                programming, path planning, and simulation using KUKA Sim.
+              </li>
+              <li>
+                Worked on real-life robotics tasks covering robot control,
+                safety measures, industrial automation processes, and execution
+                flows.
+              </li>
+              <li>
+                Served as a student coordinator leading a team of 15 people and
+                volunteered as a stall representative, strengthening leadership,
+                communication, and event management skills.
+              </li>
+            </ul>
+            <div class="experience-tags">
+              <span>KUKA</span>
+              <span>KRL</span>
+              <span>ROS</span>
+              <span>PLC Programming</span>
+              <span>KUKA Sim</span>
+              <span>Leadership</span>
             </div>
           </article>
 
@@ -319,7 +423,7 @@
             </div>
             <div class="freelance-layout">
               <div class="freelance-copy">
-                <h3>Frontend Freelancer</h3>
+                <h3>Freelance Work</h3>
                 <h4>Punarnavam</h4>
                 <p>
                   Built and launched Punarnavam, a React.js web application for
@@ -681,11 +785,7 @@
         </div>
       </section>
     </div>
-    <div
-      class="project-modal"
-      id="projectModal"
-      aria-hidden="true"
-    >
+    <div class="project-modal" id="projectModal" aria-hidden="true">
       <div class="project-modal-backdrop" data-modal-close></div>
       <div
         class="project-modal-dialog"
