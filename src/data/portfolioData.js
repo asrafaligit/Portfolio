@@ -28,7 +28,7 @@ export const personalInfo = {
   },
   summary:
     "MCA graduate and full-time Software Developer with hands-on experience building production-grade, full-stack web platforms and AI-powered systems using the MERN stack, Tailwind CSS, FastAPI, Python, and machine learning. Architect of scalable commercial ecosystems including Aakasa Skills Academy, Aakasa Nexus, Aakasa Learn LMS, CRM, HRMS, and client platforms like Janki Traders and Punarnavam Clinic. Seeking Software Engineer, Backend, or AI/ML Engineer roles.",
-  resumeUrl: "Md_Asraf_Ali_Resume.pdf",
+  resumeUrl: "/Md_AsrafAli_Resume.pdf",
 };
 
 export const socialLinks = {
@@ -60,7 +60,7 @@ export const heroContent = {
     text: "Get In Touch",
     href: "#contact",
   },
-  ctaResume: { text: "View Resume", href: "Md_Asraf_Ali_Resume.pdf" },
+  ctaResume: { text: "View Resume", href: "/Md_AsrafAli_Resume.pdf" },
 };
 
 export const aboutContent = {
