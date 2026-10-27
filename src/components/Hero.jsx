@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { siGithub } from 'simple-icons';
-import profilePic from '../assets/profile-pic.png';
+import heroProfilePic from '../assets/hero-profile.jpg';
 import { heroContent, socialLinks, personalInfo } from '../data/portfolioData';
 
 const siLinkedin = {
@@ -514,7 +514,7 @@ const Hero = () => {
 
               {/* PROFILE IMAGE INSIDE TV SCREEN */}
               <img
-                src={profilePic}
+                src={heroProfilePic}
                 alt={personalInfo.name}
                 className="
                   relative
@@ -523,9 +523,9 @@ const Hero = () => {
                   aspect-video
                   w-full
                   object-cover
-                  object-[center_18%]
+                  object-[center_28%]
                   bg-black
-                  brightness-[0.96]
+                  brightness-[0.98]
                   contrast-[1.02]
                   transition-transform
                   duration-700
