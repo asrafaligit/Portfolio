@@ -523,7 +523,7 @@ const Hero = () => {
                   aspect-video
                   w-full
                   object-cover
-                  object-[center_28%]
+                  object-[center_32%]
                   bg-black
                   brightness-[0.98]
                   contrast-[1.02]
