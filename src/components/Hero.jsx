@@ -163,9 +163,9 @@ const Hero = () => {
         md:px-12
         md:pb-24
         md:pt-36
-        lg:grid-cols-12
+        lg:grid-cols-2
         lg:items-center
-        lg:gap-12
+        lg:gap-14
       "
     >
       {/* Background Ambience Orbs */}
@@ -188,7 +188,8 @@ const Hero = () => {
           items-start
           justify-center
           text-left
-          lg:col-span-7
+          lg:col-start-1
+          lg:row-start-1
         "
       >
         <div className="flex w-full max-w-2xl flex-col items-start text-left">
@@ -328,70 +329,310 @@ const Hero = () => {
       </div>
 
       {/* =====================================================
-          RIGHT COLUMN: PROFILE PORTRAIT (REPLACING THE TV)
+          RIGHT COLUMN: RETRO TV WITH AUTHENTIC PROFILE IMAGE
       ===================================================== */}
       <div
         data-aos="fade-left"
         data-aos-delay="300"
         className="
+          hero-reel-frame
           relative
           z-10
           order-2
           mx-auto
-          mt-10
-          flex
+          mt-8
           w-full
-          max-w-[420px]
-          sm:max-w-[460px]
-          lg:col-span-5
+          max-w-[860px]
+          transition-transform
+          duration-700
+          ease-out
+          hover:-translate-y-1
+          lg:col-start-2
+          lg:row-start-1
           lg:mt-0
-          lg:justify-end
         "
       >
-        {/* Soft Ambient Glows behind Profile Card */}
-        <div className="pointer-events-none absolute -inset-4 rounded-[3rem] bg-gradient-to-tr from-amber-500/20 via-amber-700/10 to-slate-900/10 blur-2xl -z-10" />
-        <div className="pointer-events-none absolute -bottom-6 -left-6 h-48 w-48 rounded-full bg-amber-600/15 blur-3xl -z-10" />
+        {/* TV OUTER BODY */}
+        <div
+          className="
+            relative
+            mx-auto
+            rounded-[2.2rem]
+            border
+            border-slate-800/80
+            bg-[#151922]
+            p-3
+            shadow-[0_35px_90px_rgba(15,23,42,0.28)]
+            transition-all
+            duration-700
+            hover:shadow-[0_45px_110px_rgba(15,23,42,0.34)]
+            sm:p-4
+            md:rounded-[2.6rem]
+            md:p-5
+          "
+        >
+          {/* TV TOP HIGHLIGHT */}
+          <div
+            className="
+              pointer-events-none
+              absolute
+              inset-x-10
+              top-1
+              h-px
+              bg-white/20
+            "
+          />
 
-        {/* Profile Card Container */}
-        <div className="group relative w-full overflow-hidden rounded-[2.2rem] border border-slate-200/90 bg-white p-3.5 sm:p-4 shadow-[0_25px_70px_rgba(32,38,43,0.14)] transition-all duration-700 hover:-translate-y-2 hover:border-amber-700/40 hover:shadow-[0_35px_90px_rgba(32,38,43,0.20)]">
-          {/* Inner Image Frame */}
-          <div className="relative overflow-hidden rounded-[1.7rem] bg-slate-950 aspect-[3/4]">
-            <img
-              src={profilePic}
-              alt={personalInfo.name}
-              className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+          {/* TV BRAND / DECORATION */}
+          <div
+            className="
+              pointer-events-none
+              absolute
+              left-7
+              top-5
+              flex
+              items-center
+              gap-2
+              md:left-9
+              md:top-7
+            "
+          >
+            <span
+              className="
+                h-1.5
+                w-1.5
+                rounded-full
+                bg-amber-400
+                shadow-[0_0_12px_rgba(251,191,36,0.7)]
+              "
             />
-
-            {/* Subtle Gradient Shadow at Bottom for Contrast */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
-
-            {/* Name & Role Overlay at Bottom of Photo */}
-            <div className="absolute inset-x-0 bottom-0 p-5 text-left text-white">
-              <div className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-pulse" />
-                <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-emerald-300">
-                  Available for Hire
-                </span>
-              </div>
-              <h2 className="mt-1 text-2xl font-black tracking-tight text-white sm:text-3xl">
-                {personalInfo.name}
-              </h2>
-              <p className="mt-0.5 text-xs font-semibold text-slate-300">
-                {personalInfo.title}
-              </p>
-            </div>
-          </div>
-
-          {/* Floating Highlight Badge: Bottom Right */}
-          <div className="mt-3.5 flex items-center justify-between border-t border-slate-100 pt-3 px-1 text-xs font-bold text-slate-700">
-            <div className="flex items-center gap-1.5 font-mono text-[11px] text-slate-600">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-600" />
-              <span>Bangalore, India</span>
-            </div>
-            <span className="rounded-full border border-amber-700/20 bg-amber-50 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-amber-800">
-              MCA Graduate
+            <span
+              className="
+                text-[7px]
+                font-bold
+                uppercase
+                tracking-[0.28em]
+                text-white/40
+                sm:text-[8px]
+              "
+            >
+              {personalInfo.shortBrand || personalInfo.brandName || 'ASRAF'}
             </span>
           </div>
+
+          {/* TV POWER LED */}
+          <div
+            className="
+              pointer-events-none
+              absolute
+              right-7
+              top-5
+              flex
+              items-center
+              gap-1.5
+              md:right-9
+              md:top-7
+            "
+          >
+            <span
+              className="
+                h-1.5
+                w-1.5
+                rounded-full
+                bg-amber-400
+                shadow-[0_0_10px_rgba(251,191,36,0.75)]
+              "
+            />
+            <span
+              className="
+                text-[6px]
+                font-semibold
+                uppercase
+                tracking-[0.18em]
+                text-white/25
+              "
+            >
+              ON
+            </span>
+          </div>
+
+          {/* TV SCREEN BEZEL */}
+          <div
+            className="
+              relative
+              mt-5
+              overflow-hidden
+              rounded-[1.55rem]
+              border
+              border-black/60
+              bg-black
+              p-1.5
+              shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06),inset_0_0_45px_rgba(0,0,0,0.9)]
+              sm:mt-6
+              sm:p-2
+              md:rounded-[1.8rem]
+            "
+          >
+            {/* INNER SCREEN */}
+            <div
+              className="
+                hero-reel-screen
+                relative
+                overflow-hidden
+                rounded-[1.2rem]
+                border
+                border-white/10
+                bg-slate-950
+                shadow-[inset_0_0_35px_rgba(0,0,0,0.8)]
+                sm:rounded-[1.4rem]
+              "
+            >
+              {/* SCREEN GLASS */}
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  inset-0
+                  z-20
+                  bg-gradient-to-br
+                  from-white/[0.10]
+                  via-transparent
+                  to-black/20
+                "
+              />
+
+              {/* SUBTLE SCREEN VIGNETTE */}
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  inset-0
+                  z-20
+                  shadow-[inset_0_0_45px_rgba(0,0,0,0.55)]
+                "
+              />
+
+              {/* PROFILE IMAGE INSIDE TV SCREEN */}
+              <img
+                src={profilePic}
+                alt={personalInfo.name}
+                className="
+                  relative
+                  z-0
+                  block
+                  aspect-video
+                  w-full
+                  object-cover
+                  object-[center_18%]
+                  bg-black
+                  brightness-[0.96]
+                  contrast-[1.02]
+                  transition-transform
+                  duration-700
+                  hover:scale-105
+                "
+              />
+
+              {/* SCREEN REFLECTION */}
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  inset-x-0
+                  top-0
+                  z-30
+                  h-1/3
+                  bg-gradient-to-b
+                  from-white/[0.06]
+                  to-transparent
+                "
+              />
+            </div>
+          </div>
+
+          {/* TV SPEAKER AREA */}
+          <div
+            className="
+              mx-auto
+              mt-3
+              flex
+              items-center
+              justify-center
+              gap-1
+              opacity-60
+              sm:mt-4
+            "
+            aria-hidden="true"
+          >
+            {Array.from({ length: 13 }).map((_, index) => (
+              <span
+                key={index}
+                className="
+                  h-1
+                  w-1
+                  rounded-full
+                  bg-white/20
+                "
+              />
+            ))}
+          </div>
+
+          {/* TV CONTROL LINE */}
+          <div
+            className="
+              mt-2
+              flex
+              items-center
+              justify-center
+              gap-2
+              sm:mt-3
+            "
+            aria-hidden="true"
+          >
+            <span className="h-1 w-8 rounded-full bg-white/10" />
+            <span className="h-1 w-1 rounded-full bg-amber-400/60" />
+            <span className="h-1 w-8 rounded-full bg-white/10" />
+          </div>
+        </div>
+
+        {/* TV FEET */}
+        <div
+          className="
+            pointer-events-none
+            relative
+            mx-auto
+            flex
+            w-[78%]
+            items-start
+            justify-between
+            px-4
+          "
+          aria-hidden="true"
+        >
+          <div
+            className="
+              h-5
+              w-20
+              -rotate-[12deg]
+              rounded-b-xl
+              bg-[#11151d]
+              shadow-[0_10px_18px_rgba(15,23,42,0.18)]
+              sm:h-6
+              sm:w-24
+            "
+          />
+          <div
+            className="
+              h-5
+              w-20
+              rotate-[12deg]
+              rounded-b-xl
+              bg-[#11151d]
+              shadow-[0_10px_18px_rgba(15,23,42,0.18)]
+              sm:h-6
+              sm:w-24
+            "
+          />
         </div>
       </div>
 
