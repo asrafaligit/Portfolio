@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import stackImage from '../assets/about/amine.jpg';
+import stackImage from '../assets/profile-pic.png';
 import { aboutContent } from '../data/portfolioData';
 
 const About = () => {
